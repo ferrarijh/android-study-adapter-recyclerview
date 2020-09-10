@@ -24,8 +24,8 @@ viewPager.offscreenPageLimit = 2
 ```
 
 ### Linking View Pager with Bottom Navigation View
-So far with only above implementations the page displayed on View Pager does not match with what Bottom Navigation View
-tells which screen you're seeing. To link those two you can add page change listener with below.
+So far with only above implementations the page displayed on View Pager does not match with what bottom navigation view
+tells which screen you're seeing. To link those two you can add page change listener to viewPager like below. (in onCreate() of MainActivity)
 ```kotlin
         viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrolled(
@@ -45,7 +45,17 @@ tells which screen you're seeing. To link those two you can add page change list
             }
         })
 ```
-Simple.
+Vice versa you want viewPager to show what you've selected from the bottom navigation view.
+```kotlin
+        bottomNavigationView.setOnItemSelectedListener{ //it: MenuItem
+            when(it.itemId){
+                R.id.menu_home -> viewPager.currentItem = 0
+                R.id.menu_library -> viewPager.currentItem = 1
+                R.id.menu_library -> viewPager.currentItem = 2
+            }
+            true
+        }
+```
 
 
 ### ViewPager.addOnPageChangeListener

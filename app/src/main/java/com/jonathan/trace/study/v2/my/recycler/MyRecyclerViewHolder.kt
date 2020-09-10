@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.jonathan.trace.study.v2.R
 
+// MyRecyclerAdapter class needs this class.
 class MyRecyclerViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
     private val textView: TextView = itemView.findViewById(R.id.recyclerTextView)
     private val imgView: ImageView = itemView.findViewById(R.id.recyclerImageView)

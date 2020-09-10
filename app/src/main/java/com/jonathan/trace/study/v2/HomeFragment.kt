@@ -22,6 +22,8 @@ class HomeFragment : Fragment() {
     ): View? = inflater.inflate(R.layout.fragment_home, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?){
+        //1) set adapter of RecyclerView(here fragment_home.xml holds it),
+        //2) load data into each view component
         super.onViewCreated(view, savedInstanceState)
         myRecyclerAdapter = MyRecyclerAdapter(view.context)
         rv_home.adapter = myRecyclerAdapter
