@@ -1,5 +1,7 @@
 What is FragmentManager? What does it do?
 
+What is data class?
+
 ```viewPager.offscreenPageLimit = n``` loads n screens to left and n screens to right of current fragment.</br>
 <i>https://black-jin0427.tistory.com/94</i>
 

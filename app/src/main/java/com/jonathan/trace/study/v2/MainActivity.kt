@@ -1,5 +1,6 @@
 package com.jonathan.trace.study.v2
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
@@ -32,5 +33,13 @@ class MainActivity : AppCompatActivity() {
                 bottomNavigationView.menu.getItem(position).isChecked = true
             }
         })
+        bottomNavigationView.setOnNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.menu_home -> viewPager.currentItem = 0
+                R.id.menu_book -> viewPager.currentItem = 1
+                R.id.menu_person -> viewPager.currentItem = 2
+            }
+            true
+        }
     }
 }
